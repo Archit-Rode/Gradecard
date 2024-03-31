@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <conio.h>
-// #include "gradecard.h"
 #include "Calculate_grade.c"
 void main()
 {

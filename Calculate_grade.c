@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <conio.h>
-// #include <gradecard.h>
 #include "Student_Entry.c"
 void Cal_grade(int num_students)
 {

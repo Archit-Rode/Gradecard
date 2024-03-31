@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <conio.h>
-// #include <gradecard.h>
 char name[100][100];
 int roll_num[100];
 int sem[100];
@@ -24,11 +23,11 @@ void Student_input(int n, int subjects)
             scanf("%d", &exam1[i][j]);
             subjectAvg[i][j] += exam1[i][j];
 
-            printf("Enter student %d subject %d Assessment 2 marks: ", (i + 1), (j + 1));
+            printf("Enter %s's subject %d Assessment 2 marks: ", name[i], (j + 1));
             scanf("%d", &exam2[i][j]);
             subjectAvg[i][j] += exam2[i][j];
 
-            printf("Enter student %d subject %d Assessment 3 marks: ", (i + 1), (j + 1));
+            printf("Enter %s's subject %d Assessment 3 marks: ", name[i], (j + 1));
             scanf("%d", &exam3[i][j]);
             subjectAvg[i][j] += exam3[i][j];
 
