@@ -1,29 +1,31 @@
 #include <stdio.h>
 #include <conio.h>
-#include "Student_Entry.c"
-void Cal_grade(int num_students)
+#include "full.h"
+void Cal_grade(student *s, int num_students)
 {
-    printf("%-15s %-8s %-8s %-12s %-12s %-12s\n", "Name", "Roll No.", "Sem", "Subject 1", "Subject 2", "Subject 3");
-    for (i = 0; i < num_students; i++)
+    for (int i = 0; i < num_subjects; i++)
     {
-        char grades[3];
-        for (int j = 0; j < 3; j++)
-        {
-            if (subjectAvg[i][j] >= 90)
-                grades[j] = 'S';
-            else if (subjectAvg[i][j] >= 80)
-                grades[j] = 'A';
-            else if (subjectAvg[i][j] >= 70)
-                grades[j] = 'B';
-            else if (subjectAvg[i][j] >= 60)
-                grades[j] = 'C';
-            else if (subjectAvg[i][j] >= 50)
-                grades[j] = 'D';
-            else if (subjectAvg[i][j] >= 40)
-                grades[j] = 'E';
-            else
-                grades[j] = 'F';
-        }
-        printf("%-15s %-8d %-8d %-12c %-12c %-12c\n", name[i], roll_num[i], sem[i], grades[0], grades[1], grades[2]);
+        float average = s->subjectAvg[i];
+        if (average >= 90)
+            s->grades[i] = 'S';
+        else if (average >= 80)
+            s->grades[i] = 'A';
+        else if (average >= 70)
+            s->grades[i] = 'B';
+        else if (average >= 60)
+            s->grades[i] = 'C';
+        else if (average >= 50)
+            s->grades[i] = 'D';
+        else if (average >= 40)
+            s->grades[i] = 'E';
+        else
+            s->grades[i] = 'F';
+    }
+    printf("| %-20s | %-10d |", s->name, s->roll_num);
+    for (int j = 0; j < num_subjects; j++)
+    {
+        printf(" %-7d |", j + 1);              // Subject number
+        printf(" %-7.2f |", s->subjectAvg[j]); // Average marks for the subject
+        printf(" %-6c |", s->grades[j]);       // Grade for the subject
     }
 }
