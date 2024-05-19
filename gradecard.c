@@ -45,7 +45,6 @@ int main()
             for (int i = 0; i < num_subjects; i++)
             {
                 printf(" %-7s %d |", "Subject", (i + 1));
-                // printf(" %-7s |", "Average");
                 printf(" %-6s |", "Grade");
             }
             printf("\n");
@@ -64,15 +63,6 @@ int main()
             break;
         case 4:
             printf("Exiting program.\n");
-            // exit(0);
-            //  for (int i = 0; i < num_students; i++)
-            //  {
-            //      fprintf(file, "%s,%d,%.2f,%.2f,%.2f\n", s[i].name, s[i].roll_num, s[i].subjectAvg[0], s[i].subjectAvg[1], s[i].subjectAvg[2]);
-            //  }
-            //  fclose(file);
-
-            // free(s);
-            // return 0;
             break;
         default:
             printf("Enter a valid choice.\n");
@@ -86,9 +76,4 @@ int main()
 
     free(s);
     return 0;
-    // FILE file = fopen("test2.csv", "w");
-
-    // fputs("hello", file);
-    // free(s);
-    // return 0;
 }

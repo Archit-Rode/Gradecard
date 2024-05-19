@@ -24,7 +24,6 @@ void Cal_grade(student *s, int num_students)
     printf("| %-20s | %-10d | %-9d |", s->name, s->roll_num, s->sem);
     for (int j = 0; j < num_subjects; j++)
     {
-        // printf(" %-7d |", j + 1);              // Subject number
         printf(" %-9.2f |", s->subjectAvg[j]); // Average marks for the subject
         printf(" %-6c |", s->grades[j]);       // Grade for the subject
     }
