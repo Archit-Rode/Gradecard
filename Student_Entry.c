@@ -7,6 +7,8 @@ void Student_input(student *s)
     scanf("%d", &s->roll_num);
     printf("Enter name: ");
     scanf("%s", &s->name);
+    printf("Enter semester: ");
+    scanf("%d", &s->sem);
     for (int i = 0; i < num_subjects; i++)
     {
         printf("Enter subject %d marks:\n", (i + 1));
@@ -18,7 +20,7 @@ void Student_input(student *s)
     }
     for (int i = 0; i < num_subjects; i++)
     {
-        int sum = 0;
+        float sum = 0;
         for (int j = 0; j < num_assessments; j++)
         {
             sum += s->marks[i][j];

@@ -12,3 +12,4 @@ typedef struct
 extern int num_students;
 void Student_input(student *s);
 void Cal_grade(student *s, int num_students);
+void searching(student *s);
