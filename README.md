@@ -1,4 +1,7 @@
 # Gradecard
+
+This is a project for creation of Grade card of multiple students.
+Implementation is done with the help of structures and dynamic memory allocation for better memory usage.
 ## Note: Run the clean up commands (Points 3 ) in bash.
 <ol>
   <li>Run command 'make' to generate the required .o files and the 'output' file.</li>
